@@ -1,0 +1,27 @@
+# ── Core framework ─────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+pydantic-settings==2.2.1
+
+# ── PDF processing ──────────────────────────────────────────────────────────
+pymupdf==1.24.3          # fitz — PDF page extraction
+
+# ── Embeddings ─────────────────────────────────────────────────────────────
+sentence-transformers==2.7.0   # local embeddings (default)
+openai==1.28.0                 # optional: OpenAI embeddings + LLM
+
+# ── Vector store ───────────────────────────────────────────────────────────
+faiss-cpu==1.8.0               # swap for faiss-gpu on CUDA hosts
+
+# ── HTTP client (for Ollama) ───────────────────────────────────────────────
+httpx==0.27.0
+
+# ── Utilities ──────────────────────────────────────────────────────────────
+numpy==1.26.4
+python-multipart==0.0.9        # FastAPI file upload support
+
+# ── Testing ────────────────────────────────────────────────────────────────
+pytest==8.2.0
+pytest-asyncio==0.23.6
+httpx==0.27.0                  # async test client
